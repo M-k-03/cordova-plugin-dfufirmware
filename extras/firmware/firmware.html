@@ -1,0 +1,66 @@
+
+<ion-header>
+    <ion-navbar>
+        <ion-row>
+          <ion-col text-center>
+            <ion-title align-self-center text-center class="page-title">
+              {{ 'Band Firmware Upgrade' | translate | uppercase}}
+            </ion-title>
+          </ion-col>
+      </ion-row>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content class="listing-content">
+      <div class="imagess">
+        <ion-row>
+          <ion-col text-center>
+            <div *ngIf="noband" class="rounded">
+              <img src="./assets/bands/default.png">
+            </div>
+            <div *ngIf="bandfound">
+              <img src="{{color}}">
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="division" *ngIf="bandfound">
+        <ion-row>
+          <ion-col>
+            <span class="headfont">BAND NAME</span>
+            <h6>{{bandsname}}</h6>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <span class="headfont">MODEL</span>
+            <h6>efitPro Band {{BandModel}}</h6>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <span class="headfont">Upgrade - Status:</span>
+            <h6>{{upgradeStatus}}</h6>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <span class="headfont">Upgrade - Percentage:</span>
+            <h6>{{loadProgress}} %</h6>
+          </ion-col>
+        </ion-row>        
+     </div>
+            
+     
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-title text-center>                            
+            <button class="addbutt" full ion-button clear (click)="callUpdateBand()">Update Band</button>
+        </ion-title>
+      </ion-toolbar> 
+</ion-footer> 
