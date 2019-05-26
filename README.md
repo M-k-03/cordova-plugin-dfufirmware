@@ -1,4 +1,4 @@
-# cordova-plugin-country
+# cordova-plugin-dfufirmware
 
 Update's Device Firmware using OTA - Ionic 3
 
