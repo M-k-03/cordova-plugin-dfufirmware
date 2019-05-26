@@ -1,12 +1,6 @@
 var DfuFirmware = function() {};
 
-/*var CountryError = function(code, message) {
-  this.code = code || null;
-  this.message = message || '';
-};*/
 
-
-/* global cordova, module */
 "use strict";
 
 var stringToArrayBuffer = function(str) {
