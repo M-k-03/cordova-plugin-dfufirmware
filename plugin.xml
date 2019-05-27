@@ -20,6 +20,8 @@
 
     <platform name="android">
         <source-file src="src/com/cloakedninjas/cordova/plugins/DfuFirmware.java" target-dir="src/com/cloakedninjas/cordova/plugins" />
+        <source-file src="src/com/cloakedninjas/cordova/plugins/DfuNotificationActivity.java" target-dir="src/com/cloakedninjas/cordova/plugins" />  
+        <source-file src="src/com/cloakedninjas/cordova/plugins/DfuService.java" target-dir="src/com/cloakedninjas/cordova/plugins" />    
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="DfuFirmware" >
                 <param name="android-package" value="com.cloakedninjas.cordova.plugins.DfuFirmware"/>
