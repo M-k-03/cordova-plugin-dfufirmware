@@ -17,8 +17,29 @@ function error () {
 //TypeScript Files need to be added from Extras folder
 
 1. copy files from extras to Provider folder
-2. Add following below in app.module.ts (In order to Detect Provider)
+2. Install the following plugin dependency plugin
+    $ ionic cordova plugin add cordova-plugin-ble-central
+    $ npm install --save @ionic-native/ble@4
+    
+    $ ionic cordova plugin add cordova-plugin-file
+    $ npm install --save @ionic-native/file@4
+
+    $ ionic cordova plugin add cordova-plugin-file-transfer
+    $ npm install --save @ionic-native/file-transfer@4
+
+3. Add following below in app.module.ts (In order to Detect Provider)
 import { DfuFirmwareProvider } from '../providers/dfufirmware/dfufirmware';
+import { BLE } from '@ionic-native/ble';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+
+4. Add Provider Dependencies:
+providers: [
+  BLE,
+  FileTransfer, 
+  FileTransferObject,
+  File,
+]
 
 //Firmware pages:
 1. copy dfufirmware folder from extras to pages folder.
