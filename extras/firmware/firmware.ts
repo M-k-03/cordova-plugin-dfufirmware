@@ -5,7 +5,7 @@ import { AddbandPage } from '../addband/addband';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { STORAGE } from '../../providers/storage/storage-keys';
 import { BluetoothProvider } from '../../providers/bluetooth/bluetooth.provider';
-import {CountryProvider} from '../../providers/country/country';
+import { DfuFirmwareProvider } from '../../providers/dfufirmware/dfufirmware';
 import { BLE } from '@ionic-native/ble';
 import { File } from '@ionic-native/file';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
@@ -43,7 +43,7 @@ export class FirmwarePage {
     private alertController:AlertController,
     private nativeStorage :NativeStorage,
     private ble: BLE,
-    private countryProvider:CountryProvider,
+    private dfuFirmwareProvider:DfuFirmwareProvider,
     private bluetoothProvider: BluetoothProvider,
     private ngzone: NgZone,
     private file: File, 
@@ -166,7 +166,7 @@ export class FirmwarePage {
    }
 
    callFirmware(deviceAddress){
-          this.countryProvider.upgradeFirmware(deviceAddress).subscribe(peripheralData => {          
+          this.dfuFirmwareProvider.upgradeFirmware(deviceAddress).subscribe(peripheralData => {          
             this.ngzone.run(()=>{            
                   setTimeout(() => { 
                     this.upgradeStatus = peripheralData.status;
