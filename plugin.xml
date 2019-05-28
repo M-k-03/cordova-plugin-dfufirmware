@@ -27,5 +27,9 @@
                 <param name="android-package" value="com.cloakedninjas.cordova.plugins.DfuFirmware"/>
             </feature>
         </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.cloakedninjas.cordova.plugins.DfuNotificationActivity"/>
+            <service android:name="com.cloakedninjas.cordova.plugins.DfuService" />
+        </config-file>
     </platform>
 </plugin>
