@@ -4,16 +4,6 @@ Update's Device Firmware using OTA - Ionic 3
 
 ## Usage #
 
-```javascript
-function success (deviceId) {
-  console.log(deviceId);
-}
-
-function error () {
-  console.warn('An error occured');
-}
-
-
 //TypeScript Files need to be added from Extras folder
 
 1. copy files from extras to Provider folder
@@ -39,6 +29,7 @@ providers: [
   FileTransfer, 
   FileTransferObject,
   File,
+  DfuFirmwareProvider 
 ]
 
 //Firmware pages:
