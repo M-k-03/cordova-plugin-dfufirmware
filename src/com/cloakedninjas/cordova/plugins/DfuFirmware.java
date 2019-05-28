@@ -100,7 +100,8 @@ public class DfuFirmware extends CordovaPlugin {
                 .setPacketsReceiptNotificationsEnabled(true)
                 .setPacketsReceiptNotificationsValue(10)
                 .setUnsafeExperimentalButtonlessServiceInSecureDfuEnabled(true)
-                .setDisableNotification(false);
+                .setForeground(false)
+                .setDisableNotification(true);
         String uribase = "file:///data/user/0/com.aiotlabs.app.efitpro/files/files/FirmwareFolder/dfupdate.zip";
         Uri uriBase = Uri.parse(uribase);
         starter.setZip(uriBase);
