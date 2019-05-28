@@ -27,8 +27,8 @@ import no.nordicsemi.android.dfu.DfuServiceListenerHelper;
 
 
 public class DfuFirmware extends CordovaPlugin {
-    private SmaManager mSmaManager;
-    private SmaCallback mSmaCallback;
+    //private SmaManager mSmaManager;
+    //private SmaCallback mSmaCallback;
     private final static String TAG = "UPGRADE_FIRMWARE";
     private CallbackContext dfuCallback;
     private final DfuProgressListener progressListener = new DfuProgressListener();
